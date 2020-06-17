@@ -13,6 +13,7 @@ module "api_gateway_lambda" {
   layers                       = var.layers
   timeout                      = 30
   create_async_event_config    = true
+  attach_policies              = true
   maximum_event_age_in_seconds = 120
   maximum_retry_attempts       = 0
   environment_variables        = var.env_vars
