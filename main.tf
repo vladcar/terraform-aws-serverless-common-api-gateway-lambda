@@ -24,7 +24,7 @@ module "api_gateway_lambda" {
   allowed_triggers = {
     APIGatewayAny = {
       service = "apigateway"
-      arn     = "arn:aws:execute-api:${data.aws_region.current}:${data.aws_caller_identity.identity.account_id}:${var.rest_api_id}/*"
+      arn     = "arn:aws:execute-api:${data.aws_region.current.name}:${data.aws_caller_identity.identity.account_id}:${var.rest_api_id}/*"
     }
   }
 }
