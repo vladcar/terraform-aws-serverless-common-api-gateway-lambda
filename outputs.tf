@@ -1,11 +1,11 @@
-output "lambda-arn" {
-  value = module.api_gateway_lambda.this_lambda_function_arn
+output "lambda_arn" {
+  value = module.lambda.lambda_arn
 }
 
 output "lambda_invoke_arn" {
-  value = module.api_gateway_lambda.this_lambda_function_invoke_arn
+  value = module.lambda.lambda_invoke_arn
 }
 
 output "lambda_function_name" {
-  value = module.api_gateway_lambda.this_lambda_function_name
+  value = module.lambda.lambda_function_name
 }
