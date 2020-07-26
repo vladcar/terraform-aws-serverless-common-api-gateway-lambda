@@ -20,6 +20,8 @@ module "lambda" {
   layers                         = var.layers
   env_vars                       = var.env_vars
   tags                           = var.tags
+  create_role                    = var.create_role
+  execution_role                 = var.execution_role
   attached_policies              = var.attached_policies
 }
 
