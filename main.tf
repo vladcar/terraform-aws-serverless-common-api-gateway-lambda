@@ -23,6 +23,9 @@ module "lambda" {
   create_role                    = var.create_role
   execution_role                 = var.execution_role
   attached_policies              = var.attached_policies
+  enable_vpc_config              = var.enable_vpc_config
+  subnet_ids                     = var.subnet_ids
+  security_group_ids             = var.security_group_ids
 }
 
 resource "aws_lambda_permission" "api_gateway_permission" {

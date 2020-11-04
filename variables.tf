@@ -86,6 +86,24 @@ variable "rest_api_id" {
   description = "Id of API Gateway that will be invoking this lambda function"
 }
 
+variable "enable_vpc_config" {
+  type        = bool
+  default     = false
+  description = "enables lambda vpc configuration"
+}
+
+variable "security_group_ids" {
+  type        = list(string)
+  default     = []
+  description = "aws_security_group id list, requires 'enable_vpc_config' set to true"
+}
+
+variable "subnet_ids" {
+  type        = list(string)
+  default     = []
+  description = "aws_subnet id list, requires 'enable_vpc_config' set to true"
+}
+
 ###########################################
 ### Async invoke configuration ############
 ###########################################
